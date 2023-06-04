@@ -8,18 +8,30 @@ defineProps({
 </script>
 
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
-    </h3>
-  </div>
+  
+  <div class="main">
+  <h2>College Registration Course</h2>
+  <h4>Login</h4>
+
+    <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email <Address></Address></label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email" aria-describedby="emailHelp" >
+          
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" placeholder="Enter Password" id="exampleInputPassword1" >
+        </div>
+             
+        <button type="submit" class="btn btn-primary">Enter System</button>
+        
+  </form>
+</div>
 </template>
 
 <style scoped>
-h1 {
+/* h1 {
   font-weight: 500;
   font-size: 2.6rem;
   top: -10px;
@@ -39,5 +51,5 @@ h3 {
   .greetings h3 {
     text-align: left;
   }
-}
+} */
 </style>

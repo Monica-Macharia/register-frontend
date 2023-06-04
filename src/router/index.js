@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import 'bootstrap/dist/css/bootstrap.css';
 
 import Login from '../components/Login.vue';
 import Register from '../components/Register.vue';

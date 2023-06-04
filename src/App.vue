@@ -5,24 +5,35 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <!-- <HelloWorld msg="You did it!" /> -->
-
-      <nav>
-        <RouterLink to="/">Login</RouterLink>
-        <RouterLink to="/register">Register</RouterLink>
-        <RouterLink to="/main">Main</RouterLink>
-      </nav>
-    </div>
+     
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <RouterLink to="/" class="nav-link" >Login</RouterLink>
+              </li>
+              <li class="nav-item">
+                
+                <RouterLink to="/register" class="nav-link">Register</RouterLink>
+              </li>
+              <li class="nav-item">
+                
+                <RouterLink to="/main" class="nav-link">Main</RouterLink>
+              </li>
+              
+            </ul>
+          </div>
+        </nav>
+   
   </header>
-
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
 </template>
 
 <style scoped>
-header {
+/* header {
   line-height: 1.5;
   max-height: 100vh;
 }
@@ -82,5 +93,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-}
+} */
 </style>
