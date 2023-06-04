@@ -4,7 +4,7 @@
   <h2>Main Panel</h2>
   
 
-      <form>
+      <form @submit.prevent="save">
             <div class="form-group">
               <label for="exampleInputEmail1">Course Name</label>
               <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >

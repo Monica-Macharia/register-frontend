@@ -12,7 +12,7 @@ defineProps({
   <div class="main">
   
 
-    <form class="login">
+    <form @submit.prevent="save" class="login">
       <h2>College Registration Course</h2>
       <h4>Login</h4>
         <div class="form-group">
@@ -37,6 +37,7 @@ defineProps({
   border-width: 1px;
   padding: 30px;
   width: 50vw;
+  margin-left: 15%;
 
 }
 .form-group{
