@@ -8,12 +8,13 @@ defineProps({
 </script>
 
 <template>
-  
-  <div class="main">
-  <h2>College Registration Course</h2>
-  <h4>Login</h4>
 
-    <form>
+  <div class="main">
+  
+
+    <form class="login">
+      <h2>College Registration Course</h2>
+      <h4>Login</h4>
         <div class="form-group">
           <label for="exampleInputEmail1">Email <Address></Address></label>
           <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email" aria-describedby="emailHelp" >
@@ -23,7 +24,7 @@ defineProps({
           <label for="exampleInputPassword1">Password</label>
           <input type="password" class="form-control" placeholder="Enter Password" id="exampleInputPassword1" >
         </div>
-             
+        <div class="form-group"></div>   
         <button type="submit" class="btn btn-primary">Enter System</button>
         
   </form>
@@ -31,6 +32,16 @@ defineProps({
 </template>
 
 <style scoped>
+.login{
+  border-style:solid;
+  border-width: 1px;
+  padding: 30px;
+  width: 50vw;
+
+}
+.form-group{
+  padding-top: 20px;
+}
 /* h1 {
   font-weight: 500;
   font-size: 2.6rem;

@@ -42,7 +42,7 @@
         <td>Mark</td>
         <td>Otto</td>
         <td>@mdo</td>
-        <td></td>
+        
         <td><button type="submit" class="btn btn-primary">Select</button></td>
       </tr>
     
