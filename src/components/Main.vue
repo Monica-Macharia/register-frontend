@@ -1,3 +1,29 @@
+<script>
+
+import { ref } from 'vue';
+
+export default {
+  setup() {
+    const courses = ref([
+      { id: 1, courseName: 'Course 1', teacherName: 'Teacher 1', totalHours: 10 },
+    
+    ]);
+    const selectCourse = ref({
+      id: null,
+      courseName: '',
+      teacherName: '',
+      totalHours: 0,
+    });
+
+    const selectedCourse = (course) => {
+      selectCourse.value = { ...course };
+    };
+
+    // const save = () => {
+    //     const newCourse = selectedCourse
+
+</script>
+
 <template>
 
 <div class="main">
@@ -6,21 +32,20 @@
 
       <form @submit.prevent="save">
             <div class="form-group">
-              <label for="exampleInputEmail1">Course Name</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+              <label for="courseName">Course Name</label>
+              <input type="text" class="form-control" id="courseName" aria-describedby="emailHelp" v-model="selectCourse.courseName">
               
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Teacher Name</label>
-              <input type="text" class="form-control" id="exampleInputPassword1" >
+              <label for="teacherName">Teacher Name</label>
+              <input type="text" class="form-control" id="teacherName" v-model="selectCourse.teacherName" >
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword2">Total of Hours</label>
-              <input type="number" class="form-control" id="exampleInputPassword2" >
+              <label for="totalHours">Total of Hours</label>
+              <input type="number" class="form-control" id="totalHours" v-model="selectCourse.totalHours" >
             </div>
           
             <button type="submit" class="btn btn-primary">Edit</button>
-            
             <button type="submit" class="btn btn-primary">Remove</button>
             <button type="submit" class="btn btn-primary">Cancel</button>
       </form>
@@ -37,13 +62,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+      <tr v-for="course in courses" :key="course.id">
+        <th scope="row">{{ course.id }}</th>
+        <td>{{ course.courseName }}</td>
+        <td>{{ course.teacherName }}</td>
+        <td>{{  course.totalHours }}</td>
         
-        <td><button type="submit" class="btn btn-primary">Select</button></td>
+        <td><button type="submit" class="btn btn-primary" @click="SelectCourse(course)"></button></td>
       </tr>
     
     </tbody>
